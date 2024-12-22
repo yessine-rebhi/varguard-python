@@ -1,2 +1,2 @@
-from .cli import VarGuard
-__all__ = ["VarGuard"]
+from .cli import VarsGuard
+__all__ = ["VarsGuard"]

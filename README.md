@@ -1,25 +1,25 @@
-# VarGuard Python Wrapper
+# VarsGuard Python Wrapper
 
-This is a Python wrapper for the [VarGuard](https://www.npmjs.com/package/varguard) library, enabling secure and efficient management of environment variables for Python projects. This wrapper allows you to use VarGuard's functionality directly within your Python code, ensuring your environment variables are properly validated and managed according to best practices.
+This is a Python wrapper for the [VarsGuard](https://www.npmjs.com/package/varsguard) library, enabling secure and efficient management of environment variables for Python projects. This wrapper allows you to use VarsGuard's functionality directly within your Python code, ensuring your environment variables are properly validated and managed according to best practices.
 
 ## Prerequisites
 
-Before using this wrapper, ensure that you have the `varguard` CLI tool installed globally on your system. You can do this by running the following command:
+Before using this wrapper, ensure that you have the `varsguard` CLI tool installed globally on your system. You can do this by running the following command:
 
 ```bash
-npm install -g varguard
+npm install -g varsguard
 ```
 
-This command installs the VarGuard CLI globally on your machine, which is necessary for the wrapper to function correctly.
+This command installs the VarsGuard CLI globally on your machine, which is necessary for the wrapper to function correctly.
 
 ## Installation
 
-To install the **VarGuard Python Wrapper** in your Python environment, you can use **pip**:
+To install the **VarsGuard Python Wrapper** in your Python environment, you can use **pip**:
 
 1. Install the package from PyPI:
 
    ```bash
-   pip install varguard-wrapper
+   pip install varsguard-wrapper
    ```
 
 2. Alternatively, you can clone the repository and install it locally for development purposes:
@@ -39,10 +39,10 @@ Once the wrapper is installed, you can use it in your Python projects. Below are
 Use the `generate` method to scan your codebase for environment variables and automatically generate a `.env.example` file.
 
 ```python
-from varguard.cli import VarGuard
+from varsguard.cli import VarsGuard
 
 # Generate .env.example from your codebase
-VarGuard.generate()
+VarsGuard.generate()
 ```
 
 ### 2. **Validate .env File**
@@ -50,10 +50,10 @@ VarGuard.generate()
 Use the `validate` method to validate your `.env` file against the `.env.example` or a schema file. You can also pass a GitHub token and repository if needed for additional context.
 
 ```python
-from varguard.cli import VarGuard
+from varsguard.cli import VarsGuard
 
 # Validate your .env file
-VarGuard.validate(token="your_github_token", repo="owner/repo", schema_path="path/to/schema.json")
+VarsGuard.validate(token="your_github_token", repo="owner/repo", schema_path="path/to/schema.json")
 ```
 
 ## Commands Reference
@@ -71,7 +71,7 @@ VarGuard.validate(token="your_github_token", repo="owner/repo", schema_path="pat
 
 ## CI/CD Integration
 
-You can integrate **VarGuard** validation into your CI/CD pipeline. The Python wrapper can be used to automatically validate environment variables during your build or deployment process. Here’s an example GitHub Actions workflow that uses the `VarGuard.validate()` method to ensure that your `.env` file is correctly configured:
+You can integrate **VarsGuard** validation into your CI/CD pipeline. The Python wrapper can be used to automatically validate environment variables during your build or deployment process. Here’s an example GitHub Actions workflow that uses the `VarsGuard.validate()` method to ensure that your `.env` file is correctly configured:
 
 ### Example GitHub Actions Workflow
 
@@ -102,11 +102,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install varguard-wrapper
+          pip install varsguard-wrapper
 
       - name: Validate .env file
         run: |
-          python -c "from varguard.cli import VarGuard; VarGuard.validate(token='${{ secrets.GITHUB_TOKEN }}', repo='owner/repo')"
+          python -c "from varsguard.cli import VarsGuard; VarsGuard.validate(token='${{ secrets.GITHUB_TOKEN }}', repo='owner/repo')"
 ```
 
 ## Testing Locally
@@ -129,18 +129,18 @@ To test the wrapper locally before publishing, make sure you have the necessary 
 3. Test your Python wrapper methods:
 
    ```python
-   from varguard.cli import VarGuard
+   from varsguard.cli import VarsGuard
 
    # Run generate method
-   VarGuard.generate()
+   VarsGuard.generate()
 
    # Run validate method
-   VarGuard.validate(token="your_github_token", repo="owner/repo", schema_path="path/to/schema.json")
+   VarsGuard.validate(token="your_github_token", repo="owner/repo", schema_path="path/to/schema.json")
    ```
 
 ## Contributing
 
-We welcome contributions! If you would like to contribute to the **VarGuard Python Wrapper**, please follow these steps:
+We welcome contributions! If you would like to contribute to the **VarsGuard Python Wrapper**, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your changes.

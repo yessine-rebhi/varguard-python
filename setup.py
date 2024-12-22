@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='varguard-python',
+    name='varsguard-python',
     version='0.0.10',
-    description='Python wrapper for the VarGuard CLI tool.',
+    description='Python wrapper for the VarsGuard CLI tool.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='Yessin Rebhi',
     author_email='rabhiyassin@gmail.com',
-    url='https://github.com/yessine-rebhi/varguard-python',
+    url='https://github.com/yessine-rebhi/varsguard-python',
     packages=find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
@@ -19,7 +19,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'varguard-python=varguard.cli:VarGuard'
+            'varsguard-python=varsguard.cli:VarsGuard'
         ]
     },
 )

@@ -2,17 +2,17 @@ import subprocess
 import shutil
 import sys
 
-if not shutil.which("varguard"):
+if not shutil.which("varsguard"):
     print(
-        "❌ VarGuard CLI not found! Please install it globally using:\n"
-        "   npm install -g varguard"
+        "❌ VarsGuard CLI not found! Please install it globally using:\n"
+        "   npm install -g varsguard"
     )
     sys.exit(1)
 
-class VarGuard:
+class VarsGuard:
     @staticmethod
     def run_command(command, *args):
-        cmd = ['varguard', command, *args]
+        cmd = ['varsguard', command, *args]
         try:
             result = subprocess.run(cmd, check=True, capture_output=True, text=True)
             print(result.stdout)
@@ -29,8 +29,8 @@ class VarGuard:
             args += ['--repo', str(repo)]
         if schema_path:
             args += ['--schemaPath', str(schema_path)]
-        VarGuard.run_command('validate', *args)
+        VarsGuard.run_command('validate', *args)
 
     @staticmethod
     def generate():
-        VarGuard.run_command('generate')
+        VarsGuard.run_command('generate')
