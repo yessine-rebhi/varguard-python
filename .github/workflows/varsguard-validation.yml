@@ -28,4 +28,5 @@ jobs:
       - name: Run varsguard validation
         run: |
           varsguard validate --token ${{ secrets.GITHUB_TOKEN }} --repo ${{ github.repository }}
+
           
