@@ -19,7 +19,7 @@ To install the **VarsGuard Python Wrapper** in your Python environment, you can 
 1. Install the package from PyPI:
 
    ```bash
-   pip install varsguard-wrapper
+   pip install varsguard
    ```
 
 2. Alternatively, you can clone the repository and install it locally for development purposes:
@@ -102,7 +102,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install varsguard-wrapper
+          pip install varsguard
 
       - name: Validate .env file
         run: |
