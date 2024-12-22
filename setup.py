@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='varsguard-python',
+    name='varsguard',
     version='0.0.10',
     description='Python wrapper for the VarsGuard CLI tool.',
     long_description=open('README.md').read(),
