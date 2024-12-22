@@ -1,0 +1,16 @@
+# Exclude .git directory and any version control directories
+exclude .git/*
+
+# Exclude files that are not needed in the package
+exclude *.pyc
+exclude __pycache__/*
+
+# Exclude IDE/editor-specific files
+exclude .vscode/*
+exclude .idea/*
+
+# Exclude environment files
+exclude .env
+
+# Exclude .github directory
+exclude .github/*
