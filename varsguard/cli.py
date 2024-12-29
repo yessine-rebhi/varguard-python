@@ -5,7 +5,7 @@ import sys
 if not shutil.which("varsguard"):
     print(
         "❌ VarsGuard CLI not found! Please install it globally using:\n"
-        "   npm install -g varsguard"
+        "   npm install -g varsguard@0.0.11"
     )
     sys.exit(1)
 
